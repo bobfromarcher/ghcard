@@ -1,0 +1,23 @@
+<svg width="648" height="256" viewBox="0 0 648 256" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" role="img" aria-label="Terminal demo: ghcard octocat --readme">
+<style>
+.ln{opacity:0;animation:rise .32s ease forwards}
+@keyframes rise{from{opacity:0}to{opacity:1}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.cur{animation:blink 1.1s step-end infinite}
+</style>
+<rect x="0" y="0" width="648" height="256" rx="10" fill="#0d1117" stroke="#30363d"/>
+<rect x="0" y="0" width="648" height="32" rx="10" fill="#161b22"/>
+<rect x="0" y="20" width="648" height="12" fill="#161b22"/>
+<circle cx="18" cy="16" r="5" fill="#ff5f56"/><circle cx="36" cy="16" r="5" fill="#ffbd2e"/><circle cx="54" cy="16" r="5" fill="#27c93f"/>
+<text x="324" y="20" fill="#7d8590" text-anchor="middle" font-size="12">ghcard octocat --readme</text>
+<text xml:space="preserve" x="18" y="69"><tspan fill="#3fb950">$ </tspan><tspan fill="#e6edf3">ghcard octocat --readme</tspan></text>
+<rect class="cur" x="219.5" y="57.0" width="7.5" height="15" fill="#c9d1d9"/>
+<text class="ln" xml:space="preserve" x="18" y="88" fill="#c9d1d9" style="animation-delay:0.35s">fetching @octocat …</text>
+<text class="ln" xml:space="preserve" x="18" y="107" fill="#c9d1d9" style="animation-delay:0.47s"> </text>
+<text class="ln" xml:space="preserve" x="18" y="126" fill="#39c5cf" style="animation-delay:0.59s">  ● ghcard @octocat · dark</text>
+<text class="ln" xml:space="preserve" x="18" y="145" fill="#3fb950" style="animation-delay:0.71s">  ✓ ..\Users\igues\AppData\Local\Temp\ghc-demo\stats.svg  (stats card)</text>
+<text class="ln" xml:space="preserve" x="18" y="164" fill="#3fb950" style="animation-delay:0.83s">  ✓ ..\Users\igues\AppData\Local\Temp\ghc-demo\languages.svg  (language card)</text>
+<text class="ln" xml:space="preserve" x="18" y="183" fill="#3fb950" style="animation-delay:0.95s">  ✓ ..\Users\igues\AppData\Local\Temp\ghc-demo\README.md  (profile readme)</text>
+<text class="ln" xml:space="preserve" x="18" y="202" fill="#c9d1d9" style="animation-delay:1.07s"> </text>
+<text class="ln" xml:space="preserve" x="18" y="221" fill="#c9d1d9" style="animation-delay:1.19s">  ★ 20.4k stars · 8 repos · 23k followers</text>
+</svg>

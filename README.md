@@ -5,23 +5,11 @@
 [![license](https://img.shields.io/npm/l/@bobfromarcher/ghcard?color=blue)](LICENSE)
 [![zero deps](https://img.shields.io/badge/dependencies-0-success)](package.json)
 
-> Most GitHub profile READMEs pull their stat cards from third-party image services that rate-limit, break, or leak your traffic. **ghcard** generates the SVG **yourself**, locally — themed stat cards, a top-languages chart, and a full profile `README.md` — from any GitHub account. **Zero dependencies. Zero AI. Zero third-party services.**
+Generates GitHub profile stat cards and a profile `README.md` for any account, and renders the SVG itself. Most profile READMEs pull their cards from a third-party image service that can rate-limit, break, or see your traffic. ghcard writes the SVG locally so the cards work offline and make no external requests. No dependencies, no AI.
 
-```bash
-ghcard bobfromarcher --readme --theme dracula
-```
+<p align="center"><img src="demo.svg" alt="ghcard generating cards and a profile readme" width="500"></p>
 
-```
-  ● ghcard @bobfromarcher · dracula
-  ✓ ghcard-out/stats.svg       (stats card)
-  ✓ ghcard-out/languages.svg   (language card)
-  ✓ ghcard-out/README.md       (profile readme)
-
-  ★ 1.2k stars · 21 repos · 340 followers
-```
-
-The cards are plain `.svg` files. Commit them to your profile repo and reference
-them in your README — they render on GitHub with no external requests at all.
+The cards are plain `.svg` files. Commit them to your profile repo and reference them in your README.
 
 ## Install
 
@@ -40,40 +28,33 @@ ghcard <username> [options]
 | Option | Description |
 | --- | --- |
 | `--out <dir>` | Output directory (default `./ghcard-out`) |
-| `--theme <name>` | `dark` · `light` · `dracula` (default `dark`) |
+| `--theme <name>` | `dark`, `light` or `dracula` (default `dark`) |
 | `--readme` | Also generate a full profile `README.md` |
 | `--json` | Print aggregated JSON instead of writing files |
 | `--token <tok>` | GitHub token (or `GITHUB_TOKEN`) for higher rate limits |
 | `-h, --help` | Show help |
 | `-v, --version` | Show version |
 
-### Examples
+## Examples
 
 ```bash
-ghcard torvalds                          # stat + language cards (dark)
-ghcard bobfromarcher --readme            # + a ready-to-commit profile README
+ghcard torvalds                          # stat and language cards (dark)
+ghcard bobfromarcher --readme            # also a ready-to-commit profile README
 ghcard octocat --theme light --out docs  # light theme into ./docs
 ghcard octocat --json | jq '.totalStars'
 ```
 
 ## What it generates
 
-- **`stats.svg`** — name, total stars, forks, followers, public repos, with a
-  subtle staggered fade-in animation.
-- **`languages.svg`** — your most-used languages as animated bars, colored with
-  GitHub's own language palette.
-- **`README.md`** (with `--readme`) — a centered header, both cards embedded, a
-  **Featured Projects** grid of your top-starred repos, and a by-the-numbers
-  summary.
+- `stats.svg`: name, total stars, forks, followers and public repos, with a staggered fade-in.
+- `languages.svg`: your most-used languages as bars, colored with GitHub's language palette.
+- `README.md` (with `--readme`): a centered header, both cards embedded, a featured-projects grid of your top-starred repos, and a short summary.
 
-Three built-in themes (`dark`, `light`, `dracula`), and every value is fetched
-straight from the public GitHub REST API — forks are excluded from your star and
-language totals so the numbers reflect *your* work.
+Three themes are built in (`dark`, `light`, `dracula`). Values come from the public GitHub REST API. Forks are excluded from your star and language totals so the numbers reflect your own work.
 
 ## Rate limits
 
-Unauthenticated GitHub API calls are limited to 60/hour. For heavy use, pass a
-token (any classic token with no scopes works for public data):
+Unauthenticated GitHub API calls are limited to 60 per hour. For heavier use, pass a token. Any classic token with no scopes works for public data:
 
 ```bash
 GITHUB_TOKEN=ghp_xxx ghcard yourname --readme
@@ -87,8 +68,8 @@ cd ghcard
 node test/test.js
 ```
 
-CI runs the suite on Node 18/20/22 across Linux, macOS and Windows.
+CI runs the suite on Node 18, 20 and 22 across Linux, macOS and Windows.
 
 ## License
 
-MIT © bobfromarcher
+MIT, bobfromarcher.
