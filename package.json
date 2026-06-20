@@ -1,0 +1,19 @@
+{
+  "name": "@bobfromarcher/ghcard",
+  "publishConfig": { "access": "public" },
+  "version": "1.0.0",
+  "description": "Generate self-contained SVG stat cards + a profile README from any GitHub account. No third-party image services — all SVG is rendered locally. Zero dependencies.",
+  "bin": { "ghcard": "bin/ghcard.js" },
+  "scripts": { "test": "node test/test.js", "start": "node bin/ghcard.js" },
+  "keywords": [
+    "github", "profile", "readme", "svg", "stats", "stat-card", "badge",
+    "github-profile", "self-hosted", "cli", "zero-dependency", "devtools"
+  ],
+  "author": "bobfromarcher",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/bobfromarcher/ghcard.git" },
+  "bugs": { "url": "https://github.com/bobfromarcher/ghcard/issues" },
+  "homepage": "https://github.com/bobfromarcher/ghcard#readme",
+  "engines": { "node": ">=16" },
+  "files": ["bin/", "README.md", "LICENSE"]
+}
